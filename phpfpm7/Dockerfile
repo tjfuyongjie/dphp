@@ -30,15 +30,16 @@ RUN apk add php7@community \
         php7-soap@community \
         php7-dev@community \
         php7-pear@community \
-        php7-redis@testing \
+        php7-redis@community \
         php7-mbstring@community \
         php7-xdebug@community \
         php7-exif@community \
         php7-xsl@community \
         php7-ldap@community \
         php7-openssl@community \
-        php7-bcmath@community
-
+        php7-bcmath@
+        
+RUN rm -rf /usr/bin/php
 RUN ln -s /usr/bin/php7 /usr/bin/php
 
 # 从国内镜像安装composer，并配置成默认从国内镜像安装composer包
